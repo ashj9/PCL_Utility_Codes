@@ -1,0 +1,5 @@
+#!/bin/bash
+echo $1
+pos=$(sed -n '12 s/ /,/g p' $1)
+echo $pos
+pcl_viewer $1 -ax $2 -ax_pos $pos
